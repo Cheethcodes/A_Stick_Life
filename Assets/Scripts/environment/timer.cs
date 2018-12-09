@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+ * 
+ *  Author:         Gabriel Hansley Chong Suarez
+ *  Date Created:   December 4, 2018
+ *  Notes:          Timer for level
+ * 
+ */
+ 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +17,7 @@ public class timer : MonoBehaviour {
     Animator anim;
     public Text displayTime;
 
-    float timeBase = 30.00f;
+    float timeBase = 120.00f;
 
     void Start()
     {
