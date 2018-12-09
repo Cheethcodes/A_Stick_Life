@@ -7,6 +7,6 @@ CharacterController2D script source: https://www.youtube.com/watch?v=dwcT-Dch0bA
 Fireworks asset source: 			 https://www.youtube.com/watch?v=zj4Iaq-KrkE  
 
 If there will be any problems or questions encountered within the project feel free to contact me:  
---- GMAIL: suarez.hanslee@gmail.com
---- YAHOO: suarez.gabby@yahoo.com
---- FB:    www.facebook.com/GabbieEz
+--- GMAIL: suarez.hanslee@gmail.com  
+--- YAHOO: suarez.gabby@yahoo.com  
+--- FB:    www.facebook.com/GabbieEz  
