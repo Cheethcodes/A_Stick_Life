@@ -44,7 +44,7 @@ public class objectInteract : MonoBehaviour {
                 "\n" +
                 "Please  also  beware  of  some  enemies  disguised  as  platforms  or  decorations  during  the  game  play." +
                 "\n\n" +
-                "MECHANICS:  To  get  to  the  next  level,  you  must  collect  at  least  40  coins.";
+                "MECHANICS:  To  get  to  the  next  level,  you  must  collect  at  least  30  coins.";
         }
         else if (x == 2)
         {

@@ -68,7 +68,7 @@ public class CharacterControllerMovement : MonoBehaviour {
             // if player is in a defeat / killed or win state set the movement speed to 0 and moving animations to false to prevent any unnecessary movements
             moveSpeed = 0;
             anim.SetBool("isMoving", false);
-            control.Move(moveH * Time.fixedDeltaTime, false, false);
+            jump = false;
         }
 
     }

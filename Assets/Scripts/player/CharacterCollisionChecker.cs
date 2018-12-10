@@ -126,8 +126,8 @@ public class CharacterCollisionChecker : MonoBehaviour {
             // Level 2
             else if (numLVL == 2)
             {
-                // Coin collected must be greater than or equal to 25 and enemies killed must be greater than or equal to 10
-                if (coinCollectedNum >= 25 && enemyKilledNum >= 10)
+                // Coin collected must be greater than or equal to 20 and enemies killed must be greater than or equal to 10
+                if (coinCollectedNum >= 20 && enemyKilledNum >= 10)
                 {
                     // If condition met, set player win state to true
                     anim.SetBool("isWIn", true);
