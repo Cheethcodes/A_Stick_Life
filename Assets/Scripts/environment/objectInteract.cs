@@ -25,14 +25,19 @@ public class objectInteract : MonoBehaviour {
 
     private void Start()
     {
-        scm = SceneManager.GetActiveScene();
-        getLVL = (scm.name.ToString()).Split('_');
-        numLVL = Convert.ToInt32(getLVL[getLVL.Length - 1]);
+        // Get level number by splitting the scene name in which the naming convention for the scene names was scenename_#
+        scm = SceneManager.GetActiveScene(); // Get current active scene
+        getLVL = (scm.name.ToString()).Split('_'); // Split the scene name 
+        numLVL = Convert.ToInt32(getLVL[getLVL.Length - 1]); // Gets the last string from the array
+
+        // Calls fillText method to know which description nad mechanics to show in the information text during the level through its argument value
         fillText(numLVL);
     }
 
     void fillText(int x)
     {
+
+        // Instructions and mechanics per level are defined below
         if (x == 1)
         {
             obj.text = "Pressing  J  will  trigger  your  attack.  Some  mobs  spawned  during  the  game  play  may  take  more  than  1  attack  to  kill  and  some  may  not  be  killable  by  any  means." + 
@@ -59,6 +64,7 @@ public class objectInteract : MonoBehaviour {
         }
         else
         {
+            // Default text
             obj.text = "Error! Level not found.";
         }
     }

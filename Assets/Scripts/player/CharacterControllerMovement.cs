@@ -20,22 +20,34 @@ public class CharacterControllerMovement : MonoBehaviour {
 
     Animator anim;
 
-    void Start() {
+    void Start()
+    {
+        // Gets the animator component of the player
+        // which will be used to check if the player meets victory or defeat (which includes checking if the player is killed)
+        // also defines the movement animations of the player
         anim = GetComponent<Animator>();
     }
 
-    void Update() {
+    void Update()
+    {
+        // Calls move method --> makes the player move or not move
         Move();
+
+        // Calls jump method --> makes the player jump or not jump
         Jump();
     }
 
     void FixedUpdate()
     {
+        // Defines what jump is
+        // The jump moves only upwards meaning that there should be a change in y-axis
         control.Move(moveH * Time.fixedDeltaTime, false, jump);
         jump = false;
 
+        // Checks whether the player is in a defeat / killed state or in a win state
         if (anim.GetBool("isDead") != true || anim.GetBool("isWin") != true)
         {
+            // movement speed change in x-axis is set to 20.00
             moveSpeed = 20f;
 
             if (moveH != 0 && jump == false)
@@ -53,13 +65,18 @@ public class CharacterControllerMovement : MonoBehaviour {
         }
         if (anim.GetBool("isDead") == true || anim.GetBool("isWin") == true)
         {
+            // if player is in a defeat / killed or win state set the movement speed to 0 and moving animations to false to prevent any unnecessary movements
             moveSpeed = 0;
             anim.SetBool("isMoving", false);
+            control.Move(moveH * Time.fixedDeltaTime, false, false);
         }
 
     }
 
     #region Movements
+
+    // Defines how player should move
+    // This includes where the player is facing
 
     void Move()
     {

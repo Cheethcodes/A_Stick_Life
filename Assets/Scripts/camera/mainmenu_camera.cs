@@ -14,6 +14,8 @@ public class mainmenu_camera : MonoBehaviour
 {
     void Update()
     {
+        // This creates an infinited update per frame in which the camera moves by itself to its new position on the x-axis.
+        // The code below shows how fast the camera should be moving on the x-axis.
         transform.Translate(new Vector3(1, 0, 0) * 2 * Time.deltaTime);
     }
 }

@@ -30,6 +30,8 @@ public class Bounds : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             //Destroy(collision.gameObject);
+
+            // Accesse the player's animator and sets the following boolean to true if condition was met
             animPlayer.SetBool("isDefeat", true);
             animPlayer.SetBool("isDead", true);
         }

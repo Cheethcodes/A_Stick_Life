@@ -28,21 +28,24 @@ public class Projectiles : MonoBehaviour {
 
     private void Start()
     {
-        fireRate = UnityEngine.Random.Range(1, 10.1f);
-        nextFire = Time.time;
+        fireRate = UnityEngine.Random.Range(1, 10.1f); // This is defined to set the fire rate of an object
+        nextFire = Time.time; // A variable that will define when the next projectile object will be thrown or fired
 
         obj = this.gameObject;
     }
 
     void Update()
     {
+        // Call attack method every frame
         attack();
     }
 
     void attack()
     {
+        // Get current time and checks if it equals the defined time in which the next copy of projectile should be thrown or fired
         if (Time.time > nextFire)
         {
+            // Call spawnobjects method to create another copy if condition met
             spawnObject();
             nextFire = Time.time + fireRate;
         }
@@ -50,6 +53,8 @@ public class Projectiles : MonoBehaviour {
 
     void spawnObject()
     {
+        // Creates a copy of the object by its RigidBody2D component
+        // Other methods for creating a copy of the objects can also be used but for this game, a prefab was used
         Rigidbody2D pj = Instantiate(projectileRB, projectileTransform.position, projectileTransform.rotation);
     }
 
