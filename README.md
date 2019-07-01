@@ -4,7 +4,4 @@ An open-source project for a sample unity 2D game entitled - A STICKLIFE. This g
 CharacterController2D script source: https://www.youtube.com/watch?v=dwcT-Dch0bA  
 Fireworks asset source: 			 https://www.youtube.com/watch?v=zj4Iaq-KrkE  
   
-If there will be any problems or questions encountered within the project feel free to contact me:  
-  * GMAIL: suarez.hanslee@gmail.com  
-  * YAHOO: suarez.gabby@yahoo.com  
-  * FB:    www.facebook.com/GabbieEz  
+If there will be any problems or questions encountered within the project feel free to contact me.
